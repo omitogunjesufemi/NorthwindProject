@@ -1,0 +1,12 @@
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\bin\Debug\net6.0\EntitiesLib.deps.json
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\bin\Debug\net6.0\EntitiesLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\bin\Debug\net6.0\EntitiesLib.pdb
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.csproj.AssemblyReference.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.AssemblyInfoInputs.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.AssemblyInfo.cs
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.csproj.CoreCompileInputs.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\refint\EntitiesLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\EntitiesLib.pdb
+C:\Users\HP 840\Documents\CodeProjects\Northwind\EntitiesLib\obj\Debug\net6.0\ref\EntitiesLib.dll

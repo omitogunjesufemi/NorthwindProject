@@ -1,0 +1,17 @@
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\ContextLib.deps.json
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\ContextLib.runtimeconfig.json
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\ContextLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\ContextLib.pdb
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\EntitiesLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\bin\Debug\net6.0\EntitiesLib.pdb
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.csproj.AssemblyReference.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.AssemblyInfoInputs.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.AssemblyInfo.cs
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.csproj.CoreCompileInputs.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.csproj.CopyComplete
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\refint\ContextLib.dll
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.pdb
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ContextLib.genruntimeconfig.cache
+C:\Users\HP 840\Documents\CodeProjects\Northwind\ContextLib\obj\Debug\net6.0\ref\ContextLib.dll

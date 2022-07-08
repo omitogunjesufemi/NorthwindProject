@@ -608,6 +608,31 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "ContextLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EntitiesLib": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.6"
+        },
+        "compile": {
+          "bin/placeholder/ContextLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ContextLib.dll": {}
+        }
+      },
+      "EntitiesLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EntitiesLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EntitiesLib.dll": {}
+        }
       }
     }
   },
@@ -1563,10 +1588,21 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ContextLib/1.0.0": {
+      "type": "project",
+      "path": "../ContextLib/ContextLib.csproj",
+      "msbuildProject": "../ContextLib/ContextLib.csproj"
+    },
+    "EntitiesLib/1.0.0": {
+      "type": "project",
+      "path": "../EntitiesLib/EntitiesLib.csproj",
+      "msbuildProject": "../EntitiesLib/EntitiesLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ContextLib >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.6",
@@ -1600,7 +1636,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj": {
+              "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

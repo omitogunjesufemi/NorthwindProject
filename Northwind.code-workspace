@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "ContextLib"
+		},
+		{
+			"path": "EntitiesLib"
+		},
+		{
+			"path": "MVC"
+		},
+		{
+			"path": "Repositories"
+		},
+		{
+			"path": "Services"
+		}
+	],
+	"settings": {}
+}

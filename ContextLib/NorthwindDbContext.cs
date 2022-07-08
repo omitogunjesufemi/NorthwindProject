@@ -10,6 +10,7 @@ namespace NorthwindLibrary
         { 
             
         }
+        
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
@@ -58,26 +59,18 @@ namespace NorthwindLibrary
             modelBuilder.Entity<Product>().HasOne(c=>c.Supplier).WithMany(p=>p.Products);
 
             // ORDER
-            modelBuilder.Entity<Order>()
-            .HasOne(o => o.Shipper)
-            .WithMany(s => s.Orders)
-            .HasForeignKey(o => o.ShipVia);
+            modelBuilder.Entity<Order>().HasOne(o => o.Shipper).WithMany(s => s.Orders).HasForeignKey(o => o.ShipVia);
 
             // ORDER DETAILS
-            modelBuilder.Entity<OrderDetail>()
-            .ToTable("Order Details");
+            modelBuilder.Entity<OrderDetail>().ToTable("Order Details");
 
-            modelBuilder.Entity<OrderDetail>()
-            .HasKey(od => new {od.OrderID, od.ProductID});
+            modelBuilder.Entity<OrderDetail>().HasKey(od => new {od.OrderID, od.ProductID});
 
 
             // SUPPLIER
-            modelBuilder.Entity<Supplier>().Property(c=>c.CompanyName)
-            .IsRequired()
-            .HasMaxLength(40);
+            modelBuilder.Entity<Supplier>().Property(c=>c.CompanyName).IsRequired().HasMaxLength(40);
 
-            modelBuilder.Entity<Supplier>().HasMany(s=>s.Products)
-            .WithOne(p=>p.Supplier);
+            modelBuilder.Entity<Supplier>().HasMany(s=>s.Products).WithOne(p=>p.Supplier);
 
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.IO;
+using NorthwindLibrary.Entities;
 
 
 namespace NorthwindLibrary 

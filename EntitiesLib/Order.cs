@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace NorthwindLibrary
+namespace NorthwindLibrary.Entities
 {
     public class Order
     {

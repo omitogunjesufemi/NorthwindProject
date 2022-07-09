@@ -1,4 +1,4 @@
-namespace NorthwindLibrary
+namespace NorthwindLibrary.Entities
 {
     public class Shipper
     {

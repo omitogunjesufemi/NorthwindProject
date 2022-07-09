@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NorthwindLibrary
+namespace NorthwindLibrary.Entities
 {
     public class Category
     {

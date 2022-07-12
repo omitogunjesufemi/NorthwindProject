@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface ISupplierRepository : IBaseRepository<Supplier>
+    public interface ISupplierRepository : IBaseRepository<Supplier, NorthwindDbContext>
     {
          Task<Supplier> GetBySupplierID(int id);
          Task<bool> DeleteBySupplierID(int id);

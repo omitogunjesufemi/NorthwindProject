@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface IBaseRepository<TEntity> where TEntity : class
+    public interface IBaseRepository<TEntity, TContext> where TEntity : class where TContext : DbContext
     {
          Task<IList<TEntity>> GetAllAsync();
          Task<TEntity> CreateAsync(TEntity entity);

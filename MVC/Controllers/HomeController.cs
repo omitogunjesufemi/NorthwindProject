@@ -1,21 +1,26 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MVC.Models;
+using NorthwindLibrary;
+using NorthwindLibrary.Entities;
 
 namespace MVC.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private ICategoryService _categoryService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, ICategoryService categoryService)
     {
         _logger = logger;
+        _categoryService = categoryService;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var model = _categoryService.GetAllCategories();
+        return View(model);
     }
 
     public IActionResult Privacy()

@@ -633,6 +633,35 @@
         "runtime": {
           "bin/placeholder/EntitiesLib.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ContextLib": "1.0.0",
+          "EntitiesLib": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.6"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -1598,16 +1627,29 @@
       "type": "project",
       "path": "../EntitiesLib/EntitiesLib.csproj",
       "msbuildProject": "../EntitiesLib/EntitiesLib.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "ContextLib >= 1.0.0",
+      "EntitiesLib >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.6",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.6"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
+      "Repositories >= 1.0.0",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1639,6 +1681,15 @@
           "projectReferences": {
             "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj": {
               "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj"
+            },
+            "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj": {
+              "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj"
+            },
+            "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj"
+            },
+            "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj"
             }
           }
         }

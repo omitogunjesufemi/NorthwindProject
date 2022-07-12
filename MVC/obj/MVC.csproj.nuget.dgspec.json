@@ -158,6 +158,15 @@
             "projectReferences": {
               "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj": {
                 "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj"
+              },
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj"
+              },
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj"
+              },
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj"
               }
             }
           }
@@ -207,6 +216,141 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\HP 840\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HP 840\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\ContextLib\\ContextLib.csproj"
+              },
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\EntitiesLib\\EntitiesLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\HP 840\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HP 840\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\HP 840\\Documents\\CodeProjects\\Northwind\\Repositories\\Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

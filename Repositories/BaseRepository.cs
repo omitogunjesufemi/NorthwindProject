@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public class BaseRepository<TEntity, TContext>:IBaseRepository<TEntity> 
+    public class BaseRepository<TEntity, TContext>:IBaseRepository<TEntity, TContext> 
     where TEntity : class
     where TContext : DbContext
     {

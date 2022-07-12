@@ -9,11 +9,14 @@
       "MVC/1.0.0": {
         "dependencies": {
           "ContextLib": "1.0.0",
+          "EntitiesLib": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
           "Microsoft.AspNetCore.Identity.UI": "6.0.6",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.6",
-          "Microsoft.EntityFrameworkCore.Tools": "6.0.6"
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
+          "Repositories": "1.0.0",
+          "Services": "1.0.0"
         },
         "runtime": {
           "MVC.dll": {}
@@ -428,6 +431,25 @@
         "runtime": {
           "EntitiesLib.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "dependencies": {
+          "ContextLib": "1.0.0",
+          "EntitiesLib": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.6"
+        },
+        "runtime": {
+          "Repositories.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "dependencies": {
+          "Repositories": "1.0.0"
+        },
+        "runtime": {
+          "Services.dll": {}
+        }
       }
     }
   },
@@ -723,6 +745,16 @@
       "sha512": ""
     },
     "EntitiesLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

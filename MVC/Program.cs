@@ -1,8 +1,10 @@
+using System.Collections.Immutable;
 using System.IO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using NorthwindLibrary;
+using NorthwindLibrary.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,31 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+// Adding Repository
+builder.Services.AddScoped(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+builder.Services.AddScoped(typeof(DbContext),typeof(NorthwindDbContext));
+//builder.Services.AddScoped<IBaseRepository<Category>, BaseRepository<Category, NorthwindDbContext>>();
+//builder.Services.AddScoped<IBaseRepository<Customer>, BaseRepository<Customer, NorthwindDbContext>>();
+
+//builder.Services.AddScoped(typeof(IBaseRepository<Category, NorthwindDbContext>), typeof(CategoryRepository));
+
+builder.Services.AddScoped<CategoryRepository>();
+builder.Services.AddScoped<IBaseRepository<Category, NorthwindDbContext>, CategoryRepository>(x => x.GetRequiredService<CategoryRepository>());
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(x => x.GetRequiredService<CategoryRepository>());
+
+//builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+//builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+//builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+//builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+//builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+//builder.Services.AddScoped<IProductRepository, ProductRepository>();
+//builder.Services.AddScoped<IShipperRepository, ShipperRepository>();
+//builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+
+// Adding Services
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+//builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 var app = builder.Build();
 

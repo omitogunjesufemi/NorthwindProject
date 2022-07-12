@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface ICustomerRepository : IBaseRepository<Customer>
+    public interface ICustomerRepository : IBaseRepository<Customer, NorthwindDbContext>
     {
         Task<Customer> GetByCustomerID(int id);
         Task<IList<Customer>> GetByCompanyName(string companyName);

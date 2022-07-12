@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface ICategoryRepository : IBaseRepository<Category>
+    public interface ICategoryRepository : IBaseRepository<Category, NorthwindDbContext>
     {
         Task<Category> GetByCategoryID(int id);
         Task<Category> GetByCategoryName(string categoryName);

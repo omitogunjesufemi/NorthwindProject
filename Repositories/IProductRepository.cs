@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface IProductRepository : IBaseRepository<Product>
+    public interface IProductRepository : IBaseRepository<Product, NorthwindDbContext>
     {
         Task<Product> GetByProductID(int id);
         Task<bool> DeleteByProductID(int id);

@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface IOrderDetailRepository : IBaseRepository<OrderDetail>
+    public interface IOrderDetailRepository : IBaseRepository<OrderDetail, NorthwindDbContext>
     {
         Task<IList<OrderDetail>> GetOrderDetailByOrderID(int orderID);
         Task<IList<OrderDetail>> GetOrderDetailByProductID(int productID);

@@ -7,7 +7,7 @@ using NorthwindLibrary.Entities;
 
 namespace NorthwindLibrary
 {
-    public interface IOrderRepository : IBaseRepository<Order>
+    public interface IOrderRepository : IBaseRepository<Order, NorthwindDbContext>
     {
         Task<Order> GetByOrderID(int id);
         Task<bool> DeleteByOrderID(int id);

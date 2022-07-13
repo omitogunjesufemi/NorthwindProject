@@ -17,13 +17,13 @@ namespace NorthwindLibrary
 
         public async Task<Category> GetByCategoryID(int id)
         {
-            Category category = await context.Categories.FindAsync(id);
+            Category category = await context.Categories.Include(c => c.Products).FirstOrDefaultAsync(c => c.CategoryID == id);
             return category;
         }
 
         public async Task<Category> GetByCategoryName(string categoryName)
         {
-            Category category = await context.Categories.SingleOrDefaultAsync(c=>c.CategoryName == categoryName);
+            Category category = await context.Categories.Include(c => c.Products).FirstOrDefaultAsync(c => c.CategoryName == categoryName);
             return category;
         }
 

@@ -10,7 +10,7 @@ namespace NorthwindLibrary
     public interface ICustomerService
     {
          Task<IList<Customer>> GetAllCustomers();
-         Task<Customer> GetCustomer(int id);
+         Task<Customer> GetCustomer(string id);
          Task<IList<Customer>> GetCustomersFromACompany(string companyName);
          Task<Customer> CreateCustomer(Customer customer);
          Task<Customer> UpdateCustomer(Customer customer);

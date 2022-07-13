@@ -22,7 +22,7 @@ namespace NorthwindLibrary
             return customers;
         }
 
-        public Task<Customer> GetCustomer(int id)
+        public Task<Customer> GetCustomer(string id)
         {
             var customer = repository.GetByCustomerID(id);
             return customer;

@@ -1,0 +1,59 @@
+@model NorthwindLibrary.Entities.Product
+@{
+    ViewData["Title"] = Model.ProductName;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="card mb3 ">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="~/images/category2.jpeg" alt="" style="max-width: 540px">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h3 class="card-title">@Model.ProductName</h3>
+                        <p class="card-text text-black">@Model.UnitPrice.Value.ToString("C")</p>
+                        <p class="card-text fst-italic">@Model.QuantityPerUnit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="card mb-3">
+            <div class="card-header">
+                Description
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit suscipit
+                    dolor iste cum excepturi tempora hic veniam repudiandae aspernatur id, quos error 
+                    asperiores quia! Animi vel voluptatem error quisquam odio? Lorem ipsum dolor sit 
+                    amet consectetur adipisicing elit. Nulla, cupiditate! Cupiditate corrupti 
+                    voluptates laudantium, delectus natus corporis optio molestias sequi nihil 
+                    iste tempore quidem architecto eaque culpa dolore dolor illo.</p>
+            </div>
+
+            <div class="card-footer">
+                
+                @if(Model.Discontinued == true)
+                {
+                    <p class="card-text muted-text">
+                        This product has been discontinued!
+                    </p>
+                }
+                else
+                {
+                    <p class="card-text muted-text">
+                        This product is still valid!
+                    </p>
+                }
+            </div>
+
+        </div>
+    </div>
+        
+</div>

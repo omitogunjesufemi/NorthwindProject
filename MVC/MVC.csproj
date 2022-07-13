@@ -26,4 +26,9 @@
     <ProjectReference Include="..\EntitiesLib\EntitiesLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Category\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

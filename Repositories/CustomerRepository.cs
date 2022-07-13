@@ -16,9 +16,9 @@ namespace NorthwindLibrary
             context = _context;
         }
 
-        public async Task<Customer> GetByCustomerID(int id)
+        public async Task<Customer> GetByCustomerID(string id)
         {
-            Customer customer = await context.Customers.FindAsync(id);
+            Customer customer = await context.Customers.FirstOrDefaultAsync(c => c.CustomerID == id);
             return customer;
         }
 

@@ -10,16 +10,24 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private ICategoryService _categoryService;
+    private IProductService _productService;
 
-    public HomeController(ILogger<HomeController> logger, ICategoryService categoryService)
+    public HomeController(ILogger<HomeController> logger, ICategoryService categoryService, IProductService productService)
     {
         _logger = logger;
         _categoryService = categoryService;
+        _productService = productService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        var model = _categoryService.GetAllCategories();
+        var products = await _productService.GetAllProducts();
+        var categories = await _categoryService.GetAllCategories();
+        var model = new CategoryProductViewModel
+        {
+            Products = products,
+            Categories = categories
+        };
         return View(model);
     }
 

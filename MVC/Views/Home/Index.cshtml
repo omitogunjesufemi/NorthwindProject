@@ -1,26 +1,63 @@
-﻿@model IEnumerable<NorthwindLibrary.Entities.Category>
+﻿@model CategoryProductViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-
-    <table>
-        <tr>
-            <th>Category ID</th>
-            <th>Category Name</th>
-            <th>Description</th>
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.CategoryID</td>
-                <td>@item.CategoryName</td>
-                <td>@item.Description</td>
-            </tr>
-        }
-    </table>
-
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Northwind Inventory</h1>
 </div>
+
+<div class="row row-cols-1">
+    <h3 class="align-content-center"> All Categories </h3>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4">
+    
+    @foreach (var category in Model.Categories)
+    {
+        var pictureIndex = @category.CategoryID;
+        var pictureString = "images/category"+pictureIndex+".jpeg";
+        <div class="col mb-4">
+            <div class="card">
+                <img src="~/@pictureString" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">@category.CategoryName</h5>
+                    <p class="card-text">@category.Description</p>
+                    <a asp-controller="Category" asp-action="CategoryDetails" asp-route-id="@category.CategoryID">View More</a>
+                </div>
+            </div>
+
+        </div>
+    }
+
+</div>
+
+<hr />
+
+<div class="row row-cols-1">
+    <h3 class="align-content-center"> All Products </h3>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3">
+
+    @foreach (var product in Model.Products)
+    {
+        if (product.Discontinued == false)
+        {
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="~/images/category1.jpeg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p class="card-text">@product.UnitPrice.Value.ToString("C")</p>
+                        <p class="card-text">@product.QuantityPerUnit per unit.</p>                    
+                        <a asp-controller="Product" asp-action="ProductDetails" asp-route-id="@product.ProductID">View More</a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    }    
+</div>
+
+

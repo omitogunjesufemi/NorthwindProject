@@ -23,9 +23,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-// Adding Repository
-builder.Services.AddScoped(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
-builder.Services.AddScoped(typeof(DbContext),typeof(NorthwindDbContext));
+// Adding Repositories
+//builder.Services.AddScoped(typeof(IBaseRepository<,>), typeof(BaseRepository<,>));
+//builder.Services.AddScoped(typeof(DbContext),typeof(NorthwindDbContext));
 
 builder.Services.AddScoped<CategoryRepository>();
 builder.Services.AddScoped<IBaseRepository<Category, NorthwindDbContext>, CategoryRepository>(x => x.GetRequiredService<CategoryRepository>());
@@ -43,10 +43,28 @@ builder.Services.AddScoped<OrderDetailRepository>();
 builder.Services.AddScoped<IBaseRepository<OrderDetail, NorthwindDbContext>, OrderDetailRepository>(x => x.GetRequiredService<OrderDetailRepository>());
 builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>(x => x.GetRequiredService<OrderDetailRepository>());
 
+builder.Services.AddScoped<CustomerRepository>();
+builder.Services.AddScoped<IBaseRepository<Customer, NorthwindDbContext>, CustomerRepository>(x => x.GetRequiredService<CustomerRepository>());
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>(x => x.GetRequiredService<CustomerRepository>());
+
+builder.Services.AddScoped<EmployeeRepository>();
+builder.Services.AddScoped<IBaseRepository<Employee, NorthwindDbContext>, EmployeeRepository>(x => x.GetRequiredService<EmployeeRepository>());
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>(x => x.GetRequiredService<EmployeeRepository>());
+
+builder.Services.AddScoped<ShipperRepository>();
+builder.Services.AddScoped<IBaseRepository<Shipper, NorthwindDbContext>, ShipperRepository>(x => x.GetRequiredService<ShipperRepository>());
+builder.Services.AddScoped<IShipperRepository, ShipperRepository>(x => x.GetRequiredService<ShipperRepository>());
+
+builder.Services.AddScoped<SupplierRepository>();
+builder.Services.AddScoped<IBaseRepository<Supplier, NorthwindDbContext>, SupplierRepository>(x => x.GetRequiredService<SupplierRepository>());
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>(x => x.GetRequiredService<SupplierRepository>());
+
+
 // Adding Services
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 
 var app = builder.Build();
 

@@ -17,21 +17,29 @@ namespace NorthwindLibrary
 
         public async Task<IList<OrderDetail>> GetOrderDetailByOrderID(int orderID)
         {
-            IList<OrderDetail> orderDetail = await context.OrderDetails.ToListAsync();
-            return orderDetail;
+            var orderDetails = await context.OrderDetails.Where(o => o.OrderID == orderID).ToListAsync();
+            return orderDetails;
         }
 
-        public async Task<IList<OrderDetail>> GetOrderDetailByProductID(int productID)
+        public async Task<IList<OrderDetail>> GetOrderDetailByProductID(int productID, int orderID)
         {
-            IList<OrderDetail> orderDetail = await context.OrderDetails.ToListAsync();
-            return orderDetail;
+            var orderDetails = await context.OrderDetails.Where(o => o.ProductID == productID & o.OrderID == orderID).ToListAsync();
+            return orderDetails;
         }
+
         public async Task<bool> DeleteOrderDetailByOrderID(int orderID)
         {
+            var orderDetails = await GetOrderDetailByOrderID(orderID);
+            context.RemoveRange(orderDetails);
+            await context.SaveChangesAsync();
             return true;
         }
-        public async Task<bool> DeleteOrderDetailByProductID(int productID)
+
+        public async Task<bool> DeleteAllOrderDetailsForAProductID(int productID, int orderID)
         {
+            var orderDetails = await GetOrderDetailByProductID(productID, orderID);
+            context.RemoveRange(orderDetails);
+            await context.SaveChangesAsync();            
             return true;
         }
     }

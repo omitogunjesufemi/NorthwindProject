@@ -10,8 +10,8 @@ namespace NorthwindLibrary
     public interface IOrderDetailRepository : IBaseRepository<OrderDetail, NorthwindDbContext>
     {
         Task<IList<OrderDetail>> GetOrderDetailByOrderID(int orderID);
-        Task<IList<OrderDetail>> GetOrderDetailByProductID(int productID);
+        Task<IList<OrderDetail>> GetOrderDetailByProductID(int productID, int orderID);
         Task<bool> DeleteOrderDetailByOrderID(int orderID);
-        Task<bool> DeleteOrderDetailByProductID(int productID);
+        Task<bool> DeleteAllOrderDetailsForAProductID(int productID, int orderID);
     }
 }

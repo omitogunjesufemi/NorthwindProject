@@ -11,11 +11,18 @@ namespace MVC.Controllers
         private readonly ILogger<OrderController> _logger;
         private readonly IOrderService _orderService;
         private readonly ICustomerService _customerService;
+        private readonly IEmployeeService _employeeService;
+        private readonly ISupplierService _supplierService;
+        private readonly IOrderDetailService _orderDetailService;
 
-        public OrderController(ILogger<OrderController> logger, IOrderService orderService)
+        public OrderController(ILogger<OrderController> logger, IOrderService orderService, ICustomerService customerService, IEmployeeService employeeService, ISupplierService supplierService, IOrderDetailService orderDetailService)
         {
             _logger = logger;
             _orderService = orderService;
+            _customerService = customerService;
+            _employeeService = employeeService;
+            _supplierService = supplierService;
+            _orderDetailService = orderDetailService;
         }
 
         public async Task<IActionResult> GetAllOrders()
@@ -24,14 +31,22 @@ namespace MVC.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> OrderCart(int id)
+        public async Task<IActionResult> OrderProfile(int id)
         {
             var order = await _orderService.GetOrder(id);
-            var customer = await _customerService.GetCustomer(order.CustomerID);
+            var customerID = order.CustomerID;
+            Customer customer = await _customerService.GetCustomer(customerID);
+            Employee employee = await _employeeService.GetEmployee(order.EmployeeID);
+            IList<OrderDetail> orderDetails = await _orderDetailService.GetAllOrderDetails(order.OrderID);
+            IList<Supplier> supplier = await _supplierService.GetAllSuppliers();
+            
             var model = new CartOrderViewModel
             {
                 Customer = customer,
-                Order = order
+                Order = order,
+                Employee = employee,
+                OrderDetails = orderDetails,
+                Supplier = supplier
             };
             return View(model);
         }

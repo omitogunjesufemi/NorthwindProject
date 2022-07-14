@@ -9,6 +9,6 @@ namespace MVC.Models
         public IList<OrderDetail> OrderDetails { get; set; }
         public Customer Customer { get; set; }
         public Employee Employee { get; set; }
-        public Supplier Supplier { get; set; }
+        public IList<Supplier> Supplier { get; set; }
     }
 }

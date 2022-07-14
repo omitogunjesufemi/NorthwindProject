@@ -1,0 +1,145 @@
+﻿@model CartOrderViewModel
+
+@{
+    ViewData["Title"] = "Order Profile";
+}
+
+<div class="container">
+    <div class="row">
+        <h4>Order Profile</h4>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="card">
+            <div class="row">            
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Order ID</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Order.OrderID</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Customer ID</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Order.CustomerID</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Order Date</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Order.OrderDate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Shipped Date</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Order.ShippedDate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Items in Cart</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.OrderDetails.Count().ToString()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <h4>Customer Profile</h4>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="card">
+            <div class="row">            
+                <div class="card-body">
+                    <div class="col-md-3">
+                        <h3>Contact Title</h3>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="card-text">@Model.Customer.ContactTitle</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Contact Name</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="card-text">@Model.Customer.ContactName</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Company Name</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Customer.CompanyName</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="card-body">
+                    <div class="col-md-3">
+                        <h3>Telephone</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="card-text">@Model.Customer.Phone</p>
+                    </div>
+                     <div class="col-md-3">
+                        <h3>Fax</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="card-text">@Model.Customer.Fax</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="card-body">
+                    <div class="col-md-3">
+                        <h3>Region</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="card-text">@Model.Customer.Region</p>
+                    </div>
+                     <div class="col-md-3">
+                        <h3>Postal Code</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="card-text">@Model.Customer.PostalCode</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <h3>Address (Country)</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="card-text">@Model.Customer.Address , @Model.Customer.City, (@Model.Customer.Country)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

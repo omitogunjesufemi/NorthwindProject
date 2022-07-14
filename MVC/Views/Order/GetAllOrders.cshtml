@@ -1,0 +1,32 @@
+﻿@model IList<NorthwindLibrary.Entities.Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CustomerID</th>
+                <th>Order Date</th>
+                <th>Shipped Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.CustomerID</td>
+                    <td>@order.OrderDate.GetValueOrDefault().ToShortDateString()</td>
+                    <td>@order.ShippedDate.GetValueOrDefault().ToShortDateString()</td>
+                    <td>
+                        <a class="btn-primary" asp-controller="Order" asp-action="OrderProfile" asp-route-id="@order.OrderID">View</a>
+                        <a class="btn-danger">Cancel</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

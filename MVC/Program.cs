@@ -62,9 +62,13 @@ builder.Services.AddScoped<ISupplierRepository, SupplierRepository>(x => x.GetRe
 
 // Adding Services
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+builder.Services.AddScoped<IShipperService, ShipperService>();
 
 var app = builder.Build();
 
